@@ -63,7 +63,7 @@ header h2 {
     color: #4d5791;
 }
 
-.main {
+main {
     padding: 40px;
     width: 100%;
 }
@@ -73,7 +73,7 @@ header h2 {
     display: inline-block;
 }
 
-.footer {
+footer {
     height: 50px;
     background-color: #b4c6f0;
     padding: 40px;
