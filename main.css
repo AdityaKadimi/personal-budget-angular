@@ -104,3 +104,12 @@ main article {
     margin-right: auto;
     width: 40%;
   }
+
+  .As{
+    font-size: 1.6em;
+    width: 12%;
+    float:right;
+    color:aliceblue;
+    padding: 30px;
+    background-color: black >
+  }
