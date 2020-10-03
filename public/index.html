@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <!-- This is a SEO change -->
+    <meta name="description" content="This is Aditya Kadimi personal budget app for the year 2020."/>
+    <!-- This is a A11y change (enabling viewport zoom)-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=0.5, maximum-scale=3.0, user-scalable=yes">
+    <!-- This is a A11y change (Unique title)-->
+    <title>Aditya Kadimi Personal Budget 2020 </title>
+    <!-- This is a SEO change -->
+    <meta name="keywords" content="expenditure,earnings,Savings">
+
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="main.css">
+</head>
+<body>
+
+    <!-- This is a semantic html change (nav)-->
+    <nav>
+        <ul>
+            <!-- This is a SEO change (nofollow)  -->
+            <li><a rel="nofollow" href="/" rel="canonical">Home</a></li>
+            <!-- This is a SEO change (canonical) -->
+            <li><a rel="nofollow" href="about.html" rel="canonical">About</a></li>
+            <li><a rel="nofollow" href="login.html" rel="canonical">Login</a></li>
+            <li><a href="https://google.com">Google</a></li>
+        </ul>
+    </nav>
+    <!-- This is a semantic html change (Header) -->
+    <header>
+        <h1>Aditya kadimi Personal Budget</h1>
+        <h2>A personal-budget management app</h2>
+        <!-- This is a A11y change (alt)-->
+        <img src="com.jpg" alt="Computer Image" width="200" height="200" class="pic">
+    </header>
+    <!-- This is a A11y change -->
+    <aside class="As">
+    Welcome To My Budget
+    </aside>
+    <!-- This is a semantic html change (main)-->
+    <main class="center">
+
+        <div class="page-area">
+            <!-- This is a semantic html change (article) -->
+            <article>
+                <h1>Stay on track</h1>
+                <!-- This is a A11y change (Dir)-->
+                <p dir="ltr">
+                    Do you know where you are spending your money? If you really stop to track it down,
+                    you would get surprised! Proper budget management depends on real data... and this
+                    app will help you with that!
+                </p>
+            </article>
+            <!-- This is a semantic html change (article)-->
+            <article>
+                <h1>Alerts</h1>
+                <!-- This is a A11y change (Dir)-->
+                <p dir="ltr">
+                    What if your clothing budget ended? You will get an alert. The goal is to never go over the budget.
+                </p>
+            </article>
+            <!-- This is a semantic html change (article)-->
+            <article>
+                <h1>Results</h1>
+                <!-- This is a A11y change (Dir)-->
+                <p dir="ltr">
+                    People who stick to a financial plan, budgeting every expense, get out of debt faster!
+                    Also, they to live happier lives... since they expend without guilt or fear... 
+                    because they know it is all good and accounted for.
+                </p>
+            </article>
+            <!-- This is a semantic html change (article)-->
+            <article>
+                <h1>Free</h1>
+                <!-- This is a A11y change (Dir)-->
+                <p dir="ltr">
+                    This app is free!!! And you are the only one holding your data!
+                </p>
+            </article>
+            <!-- This is a semantic html change (article)-->
+            <article>
+                <h1>Stay on track</h1>
+                <!-- This is a A11y change (Dir)-->
+                <p dir="ltr">
+                    Do you know where you are spending your money? If you really stop to track it down,
+                    you would get surprised! Proper budget management depends on real data... and this
+                    app will help you with that!
+                </p>
+            </article>
+            <!-- This is a semantic html change (article)-->
+            <article>
+                <h1>Alerts</h1>
+                <!-- This is a A11y change (Dir)-->
+                <p dir="ltr">
+                    What if your clothing budget ended? You will get an alert. The goal is to never go over the budget.
+                </p>
+            </article>
+            <!-- This is a semantic html change (article)-->
+            <article>
+                <h1>Results</h1>
+                <!-- This is a A11y change (Dir)-->
+                <p dir="ltr">
+                    People who stick to a financial plan, budgeting every expense, get out of debt faster!
+                    Also, they to live happier lives... since they expend without guilt or fear... 
+                    because they know it is all good and accounted for.
+                </p>
+            </article>
+            <!-- This is a semantic html change (article)-->
+            <article>
+                <h1>Chart</h1>
+                <!-- This is a A11y change (Dir)-->
+                <p dir="ltr">
+                    This app is free!!! And you are the only one holding your data!
+                    <canvas id="myChart" width="400" height="400" left="50%"></canvas>
+                </p>
+            </article>
+
+        </div>
+
+    </main>
+    <!-- This is a semantic html change (Footer)-->
+    <footer>
+        <div class="center">
+            All rights reserved &copy; Aditya kadimi
+        </div>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.20.0/axios.min.js" integrity="sha512-quHCp3WbBNkwLfYUMd+KwBAgpVukJu5MncuQaWXgCrfgcxCJAq/fo+oqrRKOj+UKEmyMCG3tb8RB63W+EmrOBg==" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.js" integrity="sha512-s+xg36jbIujB2S2VKfpGmlC3T5V2TF3lY48DX7u2r9XzGzgPsa6wTpOQA7J9iffvdeBN0q9tKzRxVxw1JviZPg==" crossorigin="anonymous"></script>
+    <script>
+        var data = {
+            datasets: [
+                {
+                    data: [],
+                    backgroundColor: [
+                        '#ffcd56',
+                        '#ff6384',
+                        '#36a2eb',
+                        '#fd6b19',
+                    ],
+                }
+            ],
+            labels: [
+                // 'Eat out',
+                // 'Rent',
+                // 'Groceries'30, 420, 200
+            ]
+        };
+
+        function createChart() {
+            var ctx=document.getElementById("myChart").getContext("2d");
+            var myPieChart = new Chart(ctx, {
+                type: 'pie',
+                data: data
+            });
+        }
+
+        function getBudget()
+        {
+            axios.get('/budget')
+            .then(function (res) {
+                console.log(res.data);
+                for(var i=0;i < res.data.length;i++){
+                    data.datasets[0].data[i] = res.data[i].budget;
+                    data.labels[i] = res.data[i].title;
+                }
+                createChart();
+            });
+        }
+        getBudget();
+    </script>
+</body>
+</html>
