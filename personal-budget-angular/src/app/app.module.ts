@@ -1,6 +1,11 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { HttpClientModule } from '@angular/common/http';
+import { FormsModule } from '@angular/forms';
+import { environment } from '../environments/environment';
+
+import { Toast, ToastrModule } from 'ngx-toastr';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -14,7 +19,17 @@ import { LoginComponent } from './login/login.component';
 import { P404Component } from './p404/p404.component';
 import { BreadcrumbsComponent } from './breadcrumbs/breadcrumbs.component';
 import { ContactComponent } from './contact/contact.component';
+import { PieComponent } from './pie/pie.component';
+import { DataService } from './data.service';
 
+import { HometableComponent } from './hometable/hometable.component';
+import { ChartsModule } from 'ng2-charts';
+import { DualbarComponent } from './dualbar/dualbar.component';
+import { LineChartComponent } from './linechart/linechart.component';
+import { AddbudgetComponent } from './addbudget/addbudget.component';
+import { AuthguardGuard } from './authguard.guard';
+import { MaxbudgetchartComponent } from './maxbudgetchart/maxbudgetchart.component';
+import { SignupComponent } from './signup/signup.component';
 
 @NgModule({
   declarations: [
@@ -28,14 +43,31 @@ import { ContactComponent } from './contact/contact.component';
     LoginComponent,
     P404Component,
     BreadcrumbsComponent,
-    ContactComponent
+    ContactComponent,
+    PieComponent,
+    HometableComponent,
+    DualbarComponent,
+    LineChartComponent,
+    AddbudgetComponent,
+    MaxbudgetchartComponent,
+    SignupComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    ChartsModule,
+    FormsModule,
+    BrowserAnimationsModule,
+    ToastrModule.forRoot({
+      timeOut: 3000,
+      progressBar: true,
+      progressAnimation: 'increasing',
+      preventDuplicates: true,
+    }),
   ],
-  providers: [],
-  bootstrap: [AppComponent]
+  providers: [DataService, AuthguardGuard],
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}
+//AuthguardGuard

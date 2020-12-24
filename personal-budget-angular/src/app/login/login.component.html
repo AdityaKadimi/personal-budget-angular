@@ -1,1 +1,24 @@
-<p>login works!</p>
+<div class="container-fluid" id="mainbody">
+  <h1 class="row" id="login">Register and Login</h1>
+
+  <div>
+  <form #simpleform="ngForm" (ngSubmit)="getValues(simpleform.value)">
+  <main id="main">
+      <div class="row col-xs-4">
+          <label for="username">Username: </label>
+          <input type="text" [(ngModel)]="username" name="username" id="username">
+      </div>
+      <br>
+      <div class="row">
+          <label for="password">Password:  </label>
+          <input type="password" [(ngModel)]="password" name="password" id="password">
+      </div>
+      <br>
+      <div>
+          <button class="registerbtn" (click)="homepage()">Login</button>
+          <button class="signupbtn" (click)="signuppage()">signup</button>
+      </div>
+  </main>
+  </form>
+  </div>
+</div>

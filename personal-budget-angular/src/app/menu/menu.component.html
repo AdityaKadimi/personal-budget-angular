@@ -1,10 +1,10 @@
 <nav>
   <ul>
-      <!-- This is a SEO change (nofollow)  -->
-      <li><a rel="nofollow" [routerLink]="['/']" rel="canonical">Home</a></li>
-      <!-- This is a SEO change (canonical) -->
-      <li><a rel="nofollow" [routerLink]="['/about']" rel="canonical">About</a></li>
-      <li><a rel="nofollow" [routerLink]="['/login']" rel="canonical">Login</a></li>
-      <li><a rel="nofollow" [routerLink]="['/contact']" rel="canonical">Contact</a></li>
+
+      <li *ngIf="isUserLoggedIn"><a [routerLink]="['/home']" title="Visit our HomePage">Home</a></li>
+      <li><a [routerLink]="['/about']" tabindex=-1 title="Visit the About Page">About</a></li>
+      <li *ngIf="!isUserLoggedIn"><a [routerLink]="['/login']" tabindex=-1 title="Login to Your Account">Login</a></li>
+      <li *ngIf="isUserLoggedIn"><a [routerLink]="['/contact']" tabindex=-1 title="You can Contact US">Contact</a></li>
+      <li *ngIf="isUserLoggedIn"><a [routerLink]="['/logout']"  title="You can Logout Here" (click)="logoutUser()">Logout</a></li>
   </ul>
 </nav>

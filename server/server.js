@@ -1,27 +1,11 @@
-//Budget API
+const express = require("express");
 
-const express = require('express');
-const cors = require('cors');
 const app = express();
-const port = 3000;
-var budget = require('./bud.json');
 
-app.use(cors());
-// app.use('/', express.static('public'));
+app.use(express.static("./dist/personal-budget-angular"));
 
-
-
-// app.get('/hello', (req, res)=>{
-//     res.send('Hello World!');
-// });
-
-// var fs = require('fs');
-// var obj = JSON.parse(fs.readFileSync('bud.json', 'utf8'));
-
-app.get('/budget', (req,res)=> {
-    res.json(budget);
+app.get("/*", (req, res) => {
+  res.sendFile("index.html", { root: "./dist/personal-budget-angular/" });
 });
 
-app.listen(port, () => {
-    console.log(`API listening at http://localhost:${port}`);
-});
+app.listen(process.env.PORT || 8080);

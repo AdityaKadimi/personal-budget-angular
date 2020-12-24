@@ -1,88 +1,80 @@
-<aside class="As">
-  Welcome To My Budget
-  </aside>
-  <!-- This is a semantic html change (main)-->
-  <main class="center">
+<div class="container center">
+  <!-- <app-breadcrumbs></app-breadcrumbs> -->
+  <div class="page-area" id="maincontent">
 
-      <div class="page-area">
-          <!-- This is a semantic html change (article) -->
-          <pb-breadcrumbs></pb-breadcrumbs>
-          <pb-article>
-              <h1>Stay on track</h1>
-              <!-- This is a A11y change (Dir)-->
-              <p>
-                  Do you know where you are sparaending your money? If you really stop to track it down,
-                  you would get surprised! Proper budget management depends on real data... and this
-                  app will help you with that!
-              </p>
-          </pb-article>
-          <!-- This is a semantic html change (article)-->
-          <pb-article>
-              <h1>Alerts</h1>
-              <!-- This is a A11y change (Dir)-->
-              <p>
-                  What if your clothing budget ended? You will get an alert. The goal is to never go over the budget.
-              </p>
-          </pb-article>
-          <!-- This is a semantic html change (pb-article)-->
-          <pb-article>
-              <h1>Results</h1>
-              <!-- This is a A11y change (Dir)-->
-              <p>
-                  People who stick to a financial plan, budgeting every expense, get out of debt faster!
-                  Also, they to live happier lives... since they expend without guilt or fear...
-                  because they know it is all good and accounted for.
-              </p>
-          </pb-article>
-          <!-- This is a semantic html change (pb-article)-->
-          <pb-article>
-              <h1>Free</h1>
-              <!-- This is a A11y change (Dir)-->
-              <p>
-                  This app is free!!! And you are the only one holding your data!
-              </p>
-          </pb-article>
-          <!-- This is a semantic html change (pb-article)-->
-          <pb-article>
-              <h1>Stay on track</h1>
-              <!-- This is a A11y change (Dir)-->
-              <p>
-                  Do you know where you are spending your money? If you really stop to track it down,
-                  you would get surprised! Proper budget management depends on real data... and this
-                  app will help you with that!
-              </p>
-          </pb-article>
-          <!-- This is a semantic html change (pb-article)-->
-          <pb-article>
-              <h1>Alerts</h1>
-              <!-- This is a A11y change (Dir)-->
-              <p>
-                  What if your clothing budget ended? You will get an alert. The goal is to never go over the budget.
-              </p>
-          </pb-article>
-          <!-- This is a semantic html change (pb-article)-->
-          <pb-article>
-              <h1>Results</h1>
-              <!-- This is a A11y change (Dir)-->
-              <p>
-                  People who stick to a financial plan, budgeting every expense, get out of debt faster!
-                  Also, they to live happier lives... since they expend without guilt or fear...
-                  because they know it is all good and accounted for.
-              </p>
-          </pb-article>
-          <!-- This is a semantic html change (pb-article)-->
-          <pb-article>
-              <h1>Chart 1</h1>
-              <!-- This is a A11y change (Dir)-->
-              <p>
-                  This app is free!!! And you are the only one holding your data!
-                  <canvas id="myChart" width="400" height="400" left="50%"></canvas>
-              </p>
-          </pb-article>
+
+      <pb-article>
+          <h1>Stay on track</h1>
+          <div>Do you know where you are spending your money? If you really stop to track it down, you would get surprised! Proper budget management depends on real data... and this pb will help you with that!'</div>
+      </pb-article>
+
+       <pb-article>
+           <h1>Alerts</h1>
+           <div>What if your clothing budget ended? You will get an alert. The goal is to never go over the budget.</div>
+       </pb-article>
+
+
+      <pb-article>
+          <h1>Free</h1>
+          <div>This personal budget application is free!!! And you are the only one holding your data!</div>
+      </pb-article>
+
+
+      <pb-article>
+          <h1>Results</h1>
+          <div> People who stick to a financial plan, budgeting every expense, get out of debt faster!
+            Also, they to live happier lives... since they expend without guilt or fear...
+            because they know it is all good and accounted for.</div>
+      </pb-article>
+
+      <div class="container">
+        <div class="row">
+            <h1 id="expense">To add New Expense? Click here</h1>
+            <button id="expense" (click)="navigateToAddBudget()">Add New Expense</button>
+        </div>
       </div>
-      </main>
-      <div>
-        <h1>Chart 2</h1>
-        <div  id="dochart" class = "donutchart"></div>
-      </div>
-    
+
+      <pb-article>
+          <div class="container">
+              <pb-hometable></pb-hometable>
+          </div>
+      </pb-article>
+
+      <pb-article>
+        <h1>Expected and Actual Budget</h1>
+        <div>
+            <pb-dualbar></pb-dualbar>
+        </div>
+      </pb-article>
+
+      <pb-article>
+          <h1>Distribution of Current Budget</h1>
+          <div>
+              <canvas id="myChart" width="400" height="400" style="width:350px;height:350px"></canvas>
+          </div>
+      </pb-article>
+
+      <pb-article>
+          <h1>Distribution of Budget</h1>
+          <div>
+              <canvas id="myMaxBudgetChart" width="400" height="400" style="width:350px;height:350px"></canvas>
+              <pb-maxbudgetchart></pb-maxbudgetchart>
+          </div>
+      </pb-article>
+
+
+
+
+
+
+      <!-- <pb-article>
+          <div class="container">
+              <pb-line-chart></pb-line-chart>
+              <h1>Line Chart</h1>
+          </div>
+      </pb-article> -->
+
+  </div>
+</div>
+<!-- <pb-addbudget></pb-addbudget> -->
+
